@@ -1141,8 +1141,8 @@ public void  retrieve() throws SQLException{
             try {
 
                 ps = con.prepareStatement("DELETE FROM patients WHERE pid = ?");
-                int id = Integer.parseInt(txt_id.getText());
-                ps.setInt(1, id);
+                String id =(txt_id.getText());
+                ps.setString(1, id);
                 ps.executeUpdate();
                 clear();
                 Show_Products_In_JTable();
